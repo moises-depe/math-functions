@@ -13,7 +13,15 @@ example and uses the values that were input into the function:
 
 export function sum(a, b) {
 
+    const sumNumber = a + b;
+    const finalString = `The sum of ${a} and ${b} is ${sumNumber}.`;
+
+    let finalArray = [sumNumber, finalString];
+
+    return finalArray;
+    
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 // Don't forget to create a new branch for your work on the next question!
@@ -27,6 +35,12 @@ Write a function called multiply() that takes in two numbers as arguments and re
 
 export function multiply(a, b) {
 
+    const multiNum = a * b;
+    const multiString = `The product of ${a} and ${b} is ${multiNum}.`;
+
+    let multiArray = [multiNum, multiString];
+
+    return multiArray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
@@ -50,8 +64,20 @@ function that you've already created. You're going to have to be resourceful to 
 how to do this. However, you may continue to use the + operator for string concatenation.
 */
 
-export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
+export function sumAndMultiplyThreeNumbers(a, b, c) { 
+    
+    const sumOne = sum(a, b)[0];
+    const sumFinal = sum(sumOne, c)[0];
 
+    const multiTwo = multiply(a, b)[0];
+    const multiFinal = multiply(multiTwo, c)[0];
+
+    const stingThree = `${a} and ${b} and ${c} sum to ${sumFinal}.`;
+    const stingFour = `The product of ${a} and ${b} and ${c} is ${multiFinal}.`;
+
+    let resultarray = [sumFinal, multiFinal, stingThree, stingFour];
+
+    return resultarray;
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
