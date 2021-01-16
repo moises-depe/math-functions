@@ -102,7 +102,9 @@ export function sumArrayWithThreeNumbers(sumArr) {
 
     const sumNum = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
     const sumString = `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${sumNum} is their sum.`;
+    
     let resultArray = [sumNum, sumString];
+    
     return resultArray;
 }
 
@@ -128,7 +130,14 @@ you may continue to use the + operator for string concatenation.
 
 export function multiplyArrayWithThreeNumbers(multArr) { //eslint-disable-line
 
+    const multiNumber = multiply(multiply(multArr[0], multArr[1])[0], multArr[2])[0];
+    const multiString = `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${multiNumber}.`;
+    
+    let finalArray = [multiNumber, multiString];
+    
+    return finalArray;
 }
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
